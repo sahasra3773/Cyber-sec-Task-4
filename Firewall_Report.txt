@@ -1,0 +1,22 @@
+TASK 4 – FIREWALL CONFIGURATION REPORT
+
+Objective:
+Learn basic firewall management and traffic filtering.
+
+Steps Performed:
+1. Listed current firewall rules
+2. Blocked Telnet port (port 23)
+3. Tested the block
+4. Allowed SSH port (port 22)
+5. Removed the block rule
+
+Outcome:
+- Successfully managed firewall rules on Windows/Linux
+- Understood inbound and outbound traffic filtering
+
+Key Concepts:
+- Firewall configuration
+- Ports
+- Network traffic filtering
+- UFW
+- Windows Firewall
