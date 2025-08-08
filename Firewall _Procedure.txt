@@ -1,0 +1,53 @@
+TASK 4 – FIREWALL CONFIGURATION PROCEDURE
+
+Objective: Configure and test basic firewall rules to allow or block traffic.
+
+------------------------------------------------------------
+WINDOWS PROCEDURE:
+
+1. Open Windows Firewall
+   - Press Windows + R, type: control firewall.cpl
+   - Or search "Windows Defender Firewall" in Start Menu.
+
+2. View current rules
+   - Advanced Settings → Inbound Rules / Outbound Rules.
+
+3. Block inbound traffic on port 23 (Telnet)
+   - Inbound Rules → New Rule → Port → TCP → Port 23 → Block → Name: Block Telnet.
+
+4. Test the block
+   - Command Prompt: telnet 127.0.0.1 23 (should fail).
+
+5. Allow SSH (Port 22)
+   - Inbound Rules → New Rule → Port → TCP → Port 22 → Allow.
+
+6. Remove block
+   - Inbound Rules → Delete "Block Telnet" rule.
+
+7. Take screenshots of each step.
+
+------------------------------------------------------------
+LINUX PROCEDURE (UFW):
+
+1. Install UFW (if not installed)
+   sudo apt install ufw
+
+2. Enable UFW
+   sudo ufw enable
+
+3. View current rules
+   sudo ufw status numbered
+
+4. Block port 23 (Telnet)
+   sudo ufw deny 23/tcp
+
+5. Test the block
+   telnet localhost 23 (should fail).
+
+6. Allow SSH (Port 22)
+   sudo ufw allow 22/tcp
+
+7. Remove block rule
+   sudo ufw delete deny 23/tcp
+
+8. Take screenshots of each step.
